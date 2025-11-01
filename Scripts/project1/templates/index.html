@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+
+</head>
+<body>
+
+<center>
+
+
+<!-- <img src={{ url_for('static', filename='img/gif1.gif')}} width="250" height="200"></img> -->
+
+
+
+<h3 class="card">روضتي - برنامج تجريبي</h3>
+
+
+<table border=0><tr>
+
+<td style="text-align: right;">
+<marquee direction="right">
+<img src={{ url_for('static', filename='img/gif4.gif')}} width="250" height="200"></img>
+</marquee>
+<button class="input" onclick="window.open('{{ url_for('admin_account_login')}}', '')" >قسم الحسابات</button></td>
+
+<td>
+<marquee direction="left">
+<img src={{ url_for('static', filename='img/gif4.gif')}} width="250" height="200"></img>
+</marquee>
+
+<button class="input" onclick="window.open('{{ url_for('administration')}}', '')" >قسم الادارة</button></td>
+
+</tr></table>
+
+
+
+
+
+</center>
+
+
+
+</body>
+</html>
+

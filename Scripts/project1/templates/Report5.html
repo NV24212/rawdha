@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+<style>
+table{
+  text-align: right;
+
+}
+</style>
+</head>
+
+
+
+<body>
+
+<center>
+
+<h3>سجل الرواتب</h3>
+
+<table border=1>
+  <thead> 
+    <td class="td">اضافة من</td>
+   <td class="td">الراتب</td>
+    <td class="td">التاريخ</td>
+    <td class="td">الرقم الشخصي</td>
+    <td class="td">اسم الموظف ة</td>
+
+
+
+
+
+   </thead>
+{% for row in rows %}
+<tr>
+<td>{{row[5]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[1]}}</td>
+
+
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+.button {
+  background-color: lightgreen;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  border: 2px solid #04AA6D;
+  float: left;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+body{
+  background-color: white; 
+}
+
+h1{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: white; 
+  color:black;
+  text-align:center;
+  text-shadow: 2px 2px 4px #000000;
+  font-size:50px;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: black;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+
+
+body{
+   background-image: url({{ url_for('static', filename='') }} );
+}
+
+</style>
+
+<script>
+
+
+</script>
+
+</head>
+<body>
+<h1>Account Data Entry</h1>
+<a href="{{ url_for('show') }}">Tables</a>
+
+
+
+
+<table id="customers"><tr>
+<th>Table</th>
+<th>Date</th>
+<th>Description</th>
+<th>Debt</th>
+<th>Credit</th>
+<th>Add Record</th>
+
+</tr>
+<form action="{{ url_for('add_cash') }}" method ="POST">
+<tr>
+<td>1- Cash</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_account_receivable') }}" method ="POST">
+<tr>
+<td>2- Account Receivable</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_inventory') }}" method ="POST">
+<tr>
+<td>3- Inventory</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_building_and_lands') }}" method ="POST">
+<tr>
+<td>4- Building_and_Lands</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_cars_and_motors') }}" method ="POST">
+<tr>
+<td>5- Cars and Motors</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_fixture_and_furniture') }}" method ="POST">
+<tr>
+<td>6- Fixture and Furniture</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_loan') }}" method ="POST">
+<tr>
+<td>7- Loan</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_bonds') }}" method ="POST">
+<tr>
+<td>8- Bonds</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_accruals_expenses') }}" method ="POST">
+<tr>
+<td>9- Accruals Expenses</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_account_payable') }}" method ="POST">
+<tr>
+<td>10- Account Payable</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_retained_earning') }}" method ="POST">
+<tr>
+<td>11- Retained Earning</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_net_income') }}" method ="POST">
+<tr>
+<td>12- Net Income</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_sales_operation') }}" method ="POST">
+<tr>
+<td class="th">13- Sales Operation</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+
+</tr>
+<form action="{{ url_for('add_sales_non_operation') }}" method ="POST">
+<tr>
+<td>14- Sales non Operation</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+
+</tr>
+<form action="{{ url_for('add_other_income_operation') }}" method ="POST">
+<tr>
+<td>15- Other Income Operation</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+
+</tr>
+<form action="{{ url_for('add_other_income_non_operation') }}" method ="POST">
+<tr>
+<td>16- Other Income non Operation</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_service') }}" method ="POST">
+<tr>
+<td>17- Services</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_product') }}" method ="POST">
+<tr>
+<td>18- Products</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_electricity') }}" method ="POST">
+<tr>
+<td>19- Electricity</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_salaries') }}" method ="POST">
+<tr>
+<td>20- Salaries</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+</tr>
+<form action="{{ url_for('add_rent') }}" method ="POST">
+<tr>
+<td>21- Rent</td>
+<td><input type="datetime-local" id="date" name="date"></td>
+<td><input type="text" id="description" name="description" value="Null"></td>
+<td><input type="number" id="debt" name="debt" value="0"></td>
+<td><input type="number" id="credit" name="credit" value="0"></td>
+<td><input type="submit" value="Submit"></td>
+</form>
+
+
+</tr></table>
+
+
+
+
+
+
+</body>
+</html>
+

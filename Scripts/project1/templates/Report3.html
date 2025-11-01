@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+
+</head>
+
+
+
+<body>
+
+<center>
+
+<h3>الفواتير</h3>
+
+<table border=1>
+  <thead>
+    <td class="td">اسم الفاتورة</td>
+    <td class="td">رقم الفاتورة</td>
+    <td class="td">الوصف</td>
+    <td class="td">المبلغ</td>
+    <td class="td">التاريخ</td>
+    <td class="td">اضافة من</td>
+   </thead>
+{% for row in rows %}
+<tr>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+<td>{{row[5]}}</td>
+<td>{{row[6]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

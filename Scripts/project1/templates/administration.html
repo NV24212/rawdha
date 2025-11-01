@@ -1,0 +1,54 @@
+<html>
+<head>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+
+
+
+<script>
+
+</script>
+
+</head>
+<body onload=runvideo()>
+
+<center>
+
+<table border=0><tr>
+
+<td>
+<center>
+<img src="{{ url_for('static', filename='img/gif6.gif')}}" width="350" height=200>
+</center>
+</td>
+</tr></table>
+<h3>Administration Department</h3>
+
+<table border=0><tr>
+<td><button class="input" onclick="window.open('{{ url_for('student_information')}}', '')">قائمة جميع الطلاب</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('late')}}', '')">اضافة تأخير</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('absent')}}', '')">اضافة غياب</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('come')}}', '')">اضافة حضور</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('register')}}', '')">اضافة طالب جديد</button></td>
+</tr></table>
+
+
+<table border=0><tr>
+<td><button class="input" onclick="window.open('{{ url_for('a_class')}}', '')">A Class</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('b_class')}}', '')">B Class</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('c_class')}}', '')">C Class</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('d_class')}}', '')">D Class</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('ee_class')}}', '')">E Class</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('f_class')}}', '')">F Class</button></td>
+</tr></table>
+
+
+
+
+</center>
+
+
+
+</body>
+</html>

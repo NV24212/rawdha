@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+body {
+  background-color: silver;
+}
+
+
+  th {
+  width : 50%;
+  text-align: right;
+
+}
+
+  td {
+  width : 50%;
+  text-align: right;
+}
+
+input {
+  width : 100%;
+
+}
+
+.input {
+  background-color : green;  
+}
+
+select {
+  width : 100%;
+}
+
+table {
+  background-color : skyblue;
+
+}
+
+
+</style>
+
+<script>
+
+
+</script>
+
+</head>
+<body>
+<center>
+
+
+
+<video width="320" height="240" controls autoplay muted>
+ <source src={{ url_for('static', filename='video/logvideo.mp4')}} type="video/mp4">
+</video>
+
+<table border=1><tr>
+
+<form action="{{ url_for('ad_user_log') }}" method ="POST">
+
+<tr>
+<td><input type="text" id="ad_user" name="ad_user" value=""></td>
+<th>الاسم</th>
+</tr><tr>
+
+<td><input type="password" id="ad_pass" name="ad_pass" value=""></td>
+<th>الرقم السري</th>
+
+</tr>
+
+<td><input class="input" type="submit" value="دخول"></td>
+<td></td>
+</form>
+</table>
+
+</center>
+
+</body>
+</html>
+

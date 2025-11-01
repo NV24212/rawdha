@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+<style>
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+   
+<center>
+
+
+<br>
+
+
+<table border=1>
+
+<thead>
+
+<td class="td">اضافة من</td>
+<td class="td">العنوان</td>
+<td class="td">التواصل</td>
+<td class="td">الراتب</td>
+<td class="td">تاريخ التوظيف</td>
+<td class="td">الوظيفة</td>
+<td class="td">الرقم الشخصي</td>
+<td class="td">اسم الموظف ة</td>
+
+</thead>
+
+{% for row in rows %}
+<tr>
+<td>{{row[7] }}</td>
+</tr><tr>
+<td>{{row[3] }}</td>
+</tr><tr>
+<td>{{row[4] }}</td>
+</tr><tr>
+<td>{{row[5] }}</td>
+</tr><tr>
+<td>{{row[6] }}</td>
+</tr><tr>
+<td>{{row[6] }}</td>
+</tr><tr>
+<td>{{row[2] }}</td>
+</tr><tr>
+<td>{{row[1] }}</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+
+</center>
+</body>
+</html>
+
+  

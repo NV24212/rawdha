@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+
+</head>
+
+
+
+<body>
+
+<center>
+
+<h1 class="card">التقارير</h1>
+
+<table border=0><tr>
+
+<td><button class="input" onclick="window.open('{{ url_for('report1_open')}}', '')">معلومات الطلاب</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report2_open')}}', '')">سجل الحظور</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report3_open')}}', '')">سجل الفواتير</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report4_open')}}', '')">سجل المدفوعات</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report5_open')}}', '')">سجل الرواتب</button></td>
+</tr><tr>
+<td><button class="input" onclick="window.open('{{ url_for('report6_open')}}', '')">تقرير</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report7_open')}}', '')">تقرير</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report8_open')}}', '')">التقرير حسب الاشهر</button></td>
+<td><button class="input" onclick="window.open('{{ url_for('report9_open')}}', '')">تقرير الحساب النهائي</button></td>
+
+</tr></table>
+
+</center>
+
+</body>
+</html>

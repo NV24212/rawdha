@@ -1,0 +1,82 @@
+<html>
+<style>
+
+table {
+  width: 60%;
+}
+
+th{
+ 
+  background-color: skyblue;
+  color: black;
+  width: 50%;
+}
+
+td{
+  text-align: center;
+
+}
+
+hr{
+ border-style: solid;
+ border-width: 1px;
+ border-color: red;
+ 
+
+
+}
+
+h3{
+  box-shadow: 10px 10px 5px silver ;
+
+}
+
+.red{
+  background-color: red;
+  font-weight: bold;
+  color: white;
+
+}
+
+
+</style>
+<body>
+
+<center>
+
+
+<h3>الصرف</h3>
+<table border=0><tr>
+<td>{{ bills_sum }}</td><th>الفواتير</th>
+</tr><tr>
+<td>{{ salary_sum }}</td><th>الرواتب</th>
+</tr><tr>
+<td class="red">{{ bills_sum + salary_sum }}</td><th>مجموع الصرف</th>
+</tr></table>
+
+
+
+<h3>الايراد</h3>
+<table border=0><tr>
+<td>{{ feez_sum }}</td><th>رسوم التسجيل</th>
+</tr><tr>
+<td>{{ amount_sum }}</td><th>الرسوم الشهرية</th>
+</tr><tr>
+<td class="red">{{ amount_sum + feez_sum }}</td><th>مجموع الدخل</th>
+
+</tr></table>
+
+
+
+<h3>الحساب النهائي</h3>
+<table border=0><tr>
+<td class="red">{{ (amount_sum + feez_sum)-(bills_sum + salary_sum) }}</td><th>الربح او الخسارة </th>
+
+</tr></table>
+
+
+
+
+</center>
+</body>
+</html>

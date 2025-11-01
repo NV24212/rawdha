@@ -1,0 +1,118 @@
+<html>
+<head>
+
+<style>
+body{
+  background-color: silver;
+
+}
+
+.input{
+  background-color: green;
+  color: white;
+  width: 100%;
+  height: 50px;
+
+}
+
+h3{
+  box-shadow: inset 5px 10px 5px #55555555;
+}
+
+</style>
+
+<script>
+
+
+</script>
+
+</head>
+<body>
+
+
+<center>
+
+
+<button style="background-color: tomato;" onclick="window.open('{{ url_for('report1_open')}}', '')">معلومات الطلاب المسجلين في النظام</button>
+<button style="background-color: tomato;" onclick="window.open('{{ url_for('register_view')}}', '')">طباعة اخر طلبات التسجيل</button>
+<br>
+<h3>تسجيل طالب جديد</h3>
+<table border=1>
+<form action="{{ url_for('add_register')}}" method ="POST">
+<tr>
+
+<td>
+<select name="class">
+   <option value="A Class">A Class</option>
+   <option value="B Class">B Class</option>
+   <option value="C Class">C Class</option>
+   <option value="D Class">D Class</option>
+   <option value="E Class">E Class</option>
+   <option value="F Class">F Class</option>
+   <option value="الفرولة">الفرولة</option>
+</select>
+</td>
+<th>الصف</th>
+
+
+</tr><tr>
+
+<td><input type="text" id="name" name="name" value=""></td>
+<th>اسم الطالب</th>
+
+
+</tr><tr>
+
+<td><input type="text" id="cpr" name="cpr" value=""></td>
+<th>الرقم الشخصي</th>
+
+
+</tr><tr>
+
+<td><input type="text" id="address" name="address" value=""></td>
+<th>العنوان</th>
+
+
+</tr><tr>
+
+<td><input type="text" id="contact1" name="contact1" value=""></td>
+<th>الاتصال</th>
+
+
+</tr><tr>
+
+<td><input type="text" id="contact2" name="contact2" value=""></td>
+<th>الالتصال</th>
+
+
+</tr><tr>
+
+<td><input type="number" id="feez" name="feez" value="0"></td>
+<th>الرسوم</th>
+
+
+</tr><tr>
+
+<td><input type="datetime-local" id="date" name="date"></td>
+<th>التاريخ</th>
+
+
+</tr><tr>
+
+
+<td><input type="text" id="add_from" name="add_from"></td>
+<th>اضافة من</th>
+
+</tr><tr>
+
+
+<td><input class="input" type="submit" value="حفظ المعلومات"></td>
+<th>تسجيل الطالب</th>
+</form>
+</tr></table>
+
+</center>
+
+</body>
+</html>
+

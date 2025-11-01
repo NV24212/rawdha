@@ -1,0 +1,65 @@
+<html>
+<head>
+
+<style>
+table{
+  width: 50%;
+  text-align: right;
+
+}
+
+td{
+  width: 50%;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body>
+<center>
+
+
+
+<center>
+<table border=0><tr>
+<td><h3>رصيد الراتب</h3></td>
+</tr><tr>
+<td><img src={{ url_for('static', filename='img/png.png')}} width="330" height="120"></img></td>
+</tr></table>
+
+<br>
+
+<table border=0>
+
+{% for row in rows %}
+<tr>
+<td>SALARY_000{{row[0] }}</td>    <td class="td">رقم االرصيد</td>
+</tr><tr>
+<td>{{row[1] }}</td>    <td class="td">اسم الموظف ة</td>
+</tr><tr>
+<td>{{row[2] }}</td>    <td class="td">الرقم الشخصي</td>
+</tr><tr>
+<td>{{row[3] }}</td>    <td class="td">الراتب الشهري</td>
+</tr><tr>
+<td>{{row[4] }}</td>    <td class="td">التاريخ</td>
+</tr><tr>
+<td>{{row[5] }}</td>    <td class="td">اصدار من</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+</center>
+</body>
+</html>
+
+  

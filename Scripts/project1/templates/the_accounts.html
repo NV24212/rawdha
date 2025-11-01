@@ -1,0 +1,58 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+<style>
+
+
+</style>
+
+<script>
+
+
+</script>
+
+</head>
+<body>
+
+<center>
+
+<table><tr>
+
+<td>
+
+<center>
+
+
+<img src="{{ url_for('static', filename='img/gif5.gif')}}" width="350" height="200">
+
+</center>
+
+</td>
+
+
+</tr></table>
+
+
+<h3 class="card">The Accounts Department</h3>
+
+
+<table border=0><tr>
+<td><button onclick="window.open('{{ url_for('report9_open')}}', '')">تقرير الحساب النهائي</button></td>
+<td><button onclick="window.open('{{ url_for('report8_open')}}', '')">التقرير حسب الاشهر</button></td>
+<td><button onclick="window.open('{{ url_for('income')}}', '')">الرسوم الشهرية</button></td>
+<td><button onclick="window.open('{{ url_for('bills')}}', '')">الفواتير</button></td>
+<td><button onclick="window.open('{{ url_for('salaries')}}', '')">الرواتب</button></td>
+<td><button onclick="window.open('{{ url_for('employees')}}', '')">الموظفين</button></td>
+</tr></table>
+
+
+</center>
+
+
+
+
+
+
+</body>
+</html>

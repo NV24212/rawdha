@@ -1,0 +1,5 @@
+SET client_encoding TO 'UTF8';
+
+UPDATE register SET feez=50 WHERE id=5;
+
+SELECT SUM(feez) FROM register;

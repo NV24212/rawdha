@@ -1,0 +1,14 @@
+<html>
+<body>
+
+<form action="{{ url_for('search') }}" method ="POST">
+<select name="name" id="name">
+{% for name in names %}
+<option value="{{ name }}"> {{ name }}</option>
+{% endfor %}
+</select>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Form</title>
+<style>
+
+</style>
+</head>
+<body>
+
+<center>
+
+<form action="" method="POST">
+   <h2>Income Details Form</h2>
+
+<table><tr>
+
+   <td><label for="incomeSource">Income Source:</label></td>
+   <td><input type="text" id="incomeSource" name="incomeSource" required></td>
+
+</tr><tr>
+
+   <td><label for="incomeAmount">Amount:</label></td>
+   <td><input type="number" id="incomeAmount" name="incomeAmount" step="0.01" required></td>
+
+</tr><tr>
+
+   <td><label for="incomeDate">Date Received:</label></td>
+   <td><input type="date" id="incomeDate" name="incomeDate" required></td>
+
+</tr><tr>
+
+   <td><label for="incomeFrequency">Frequency:</label></td>
+   <td><select id="incomeFrequency" name="incomeFrequency">
+      <option value="register_feez">Register Feez</option>
+      <option value="monthly_feez">Monthly Feez</option>
+      <option value="other_feez">Other Feez</option>
+      </select></td>
+
+</tr><tr>
+
+   <td><label for="notes">Notes:</label></td>
+   <td><textarea id="notes" name="notes" rows="4"></textarea></td>
+
+
+</tr></table>
+
+   <button type="submit">Submit Income</button>
+
+
+</form>
+
+</center>
+
+</body>
+</html>

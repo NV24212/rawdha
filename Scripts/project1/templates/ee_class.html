@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+
+</head>
+
+
+
+<body>
+
+<center>
+<div class="card">
+<h3>صف الفرولة</h3>
+</div>
+<table>
+  <thead>
+    <td class="td">الصف</td>
+    <td class="td">اسم الطالب</td>
+    <td class="td">الرقم الشخصي</td>
+    <td class="td">العنوان</td>
+    <td class="td">هاتف الام</td>
+    <td class="td">تاريخ التسجيل</td>
+   </thead>
+   
+{% for row in rows %}
+<tr>
+<td class="align_text">{{row[1]}}</td>
+<td class="align_text">{{row[2]}}</td>
+<td class="align_text">{{row[3]}}</td>
+<td class="align_text">{{row[4]}}</td>
+<td class="align_text">{{row[5]}}</td>
+<td class="align_text">{{row[8]}}</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+
+</body>
+</html>

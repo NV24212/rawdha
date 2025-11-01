@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ss.css') }}">
+<style>
+table{
+  text-align: right;
+
+}
+</style>
+</head>
+
+
+
+<body>
+
+<center>
+<h3>سجل الغياب</h3>
+
+<table border=1>
+  <thead>
+    <td class="td">الصف</td>
+    <td class="td">الاسم</td>
+    <td class="td">الحالة</td>
+    <td class="td">التاريخ</td>
+   </thead>
+{% for row in rows %}
+<tr>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
+
+  
