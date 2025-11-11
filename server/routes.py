@@ -1,29 +1,6 @@
-from flask import Flask, render_template, url_for, request, g
-import psycopg2
-from my_classes.user_manager import UserManager, Users
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-app = Flask(__name__)
-
-def get_db():
-    if 'db' not in g:
-        g.db = psycopg2.connect(
-            database=os.environ.get('POSTGRES_DB'),
-            user=os.environ.get('POSTGRES_USER'),
-            password=os.environ.get('POSTGRES_PASSWORD'),
-            host=os.environ.get('POSTGRES_HOST', 'db'),
-            port=os.environ.get('POSTGRES_PORT', '5432')
-        )
-    return g.db
-
-@app.teardown_appcontext
-def close_db(e=None):
-    db = g.pop('db', None)
-    if db is not None:
-        db.close()
+from flask import render_template, request, current_app as app
+from .database import get_db
+from my_classes.user_manager import Users
 
 @app.route("/")
 def login():
