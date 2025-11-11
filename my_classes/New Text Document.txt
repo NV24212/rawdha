@@ -1,2 +1,0 @@
-users_data = {1: "Ahmed", 2: "Ali"}
-user_manager = UserManager(users_data)

@@ -1,6 +1,6 @@
 from flask import render_template, request, current_app as app
 from .database import get_db
-from my_classes.user_manager import Users
+from .user_manager import Users
 
 @app.route("/")
 def login():
